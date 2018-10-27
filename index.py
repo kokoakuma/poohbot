@@ -49,7 +49,7 @@ def handle_message(event):
     print("handle_message:", event)
     text = event.message.text
 
-    if (text.starswith('http')):
+    if (text.startswith('http')):
         image_text = get_text_by_ms(text)
         messages = [
             TextSendMessage(text=image_text),
